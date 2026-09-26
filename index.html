@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Bridge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Sign Bridge
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h1>
+                Welcome to <span>Sign Bridge</span>
+            </h1>
+
+            <p>
+                Communication Without Barriers
+            </p>
+
+            <p class="description">
+                Sign Bridge helps connect sign language and spoken
+                communication using AI-powered technology.
+            </p>
+
+            <button id="startButton">
+                Start Communication
+            </button>
+
+        </div>
+<!-- Data Collection Section -->
+
+<div class="data-collection">
+
+    <h3>🤖 Sign Data Collection</h3>
+
+    <p>
+        Select a sign and collect hand landmark data.
+    </p>
+
+    <select id="signSelect">
+
+        <option value="HELLO">HELLO</option>
+
+        <option value="THANK_YOU">THANK YOU</option>
+
+        <option value="YES">YES</option>
+
+        <option value="NO">NO</option>
+
+    </select>
+
+    <button id="collectButton">
+        Start Collecting
+    </button>
+
+    <p id="collectionStatus">
+        Ready to collect data.
+    </p>
+    <button id="downloadButton">
+    Download Dataset
+</button>
+
+</div>
+    </section>
+
+
+    <!-- Communication Section -->
+    <section class="communication" id="communication">
+
+        <h2>Sign Bridge Communication</h2>
+
+        <div class="communication-container">
+
+            <!-- Camera -->
+            <div class="camera-box">
+
+                <h3>📷 Camera</h3>
+
+                <div class="camera-screen">
+                    <video
+            id="cameraVideo"
+            autoplay
+            playsinline>
+        </video>
+        <canvas id="handCanvas"></canvas>
+
+                </div>
+                <button id="cameraButton">
+                    Start Camera
+                </button>
+
+            </div>
+
+
+            <!-- Sign Detection -->
+            <div class="result-box">
+
+                <h3>Detected Sign</h3>
+
+                <div class="detected-sign">
+                    HELLO
+                </div>
+
+                <div class="speech-output">
+                    🔊 Hello
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Speech -->
+        <div class="speech-box">
+
+            <h3>🎤 Speech</h3>
+
+            <p id="speechText">
+                Your speech will appear here...
+            </p>
+
+            <button id="speechButton">
+                Start Speech
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Sign Bridge</h2>
+
+        <p>
+            Sign Bridge is an accessibility-focused project designed
+            to help deaf, hard-of-hearing, and hearing people
+            communicate more naturally.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>🤟 Sign → Text</h3>
+                <p>
+                    Recognize sign language and convert it into text.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🔊 Text → Speech</h3>
+                <p>
+                    Convert recognized signs into spoken language.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🎤 Speech → Text</h3>
+                <p>
+                    Convert spoken communication into text.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- ==========================================
+     SEQUENCE DATA COLLECTION
+     ========================================== -->
+
+<div class="sequence-collection">
+
+    <h3>🎬 Sign Sequence Collection</h3>
+
+    <p>
+        Collect movement-based sign sequences.
+    </p>
+
+    <select id="sequenceSignSelect">
+
+        <option value="HELLO">HELLO</option>
+
+        <option value="THANK_YOU">THANK YOU</option>
+
+        <option value="YES">YES</option>
+
+        <option value="NO">NO</option>
+
+    </select>
+
+    <button id="sequenceButton">
+        Start Sequence
+    </button>
+
+    <p id="sequenceStatus">
+        Ready.
+    </p>
+
+    <p id="sequenceCount">
+        Sequences collected: 0
+    </p>
+
+    <button id="downloadSequenceButton">
+        Download Sequence Dataset
+    </button>
+
+</div>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Sign Bridge | AI-Powered Accessibility
+        </p>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+<script src="script.js"></script>
+
+  
+</body>
+
+</html>
